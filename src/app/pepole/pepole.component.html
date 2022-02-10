@@ -1,0 +1,31 @@
+
+<div class="container">
+<div class="row py-5">
+
+
+    <div class="col-md-4 align-items-center d-flex">
+        <div>
+            <div class="bord w-25 mb-4"></div>
+            <h2>Trending Actors  <br> Right now</h2>
+            <p class="secondFontColor my-2">Most watched persons by dayes</p>
+            <div class="bord w-75 mb-4"></div>
+        </div>
+    </div>
+
+    <div *ngFor='let person of trendingpoepole' class="col-md-2">
+
+        <div class="persons my-2 align-items-center position-relative">
+            <a [routerLink]='["/moviedetils",person.id]'> 
+
+            <img class="w-100" [src]="imgPrifex+person.profile_path" alt="{person.title">
+            <h3 class="h6 my-2">{{person.name}}</h3>
+
+</a>
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+

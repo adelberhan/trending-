@@ -1,0 +1,39 @@
+<div class="w-75 m-auto p-5">
+
+    <form [formGroup]="loginForm" (ngSubmit)='postLogin(loginForm)'>
+  
+      <div *ngIf='messageError.length > 0' class="alert alert-danger" role="alert">
+        <p>{{messageError}}</p>
+      </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" formControlName="email"
+           name="" id="email" class="form-control"
+            placeholder="" aria-describedby="helpId">
+            <div *ngIf="loginForm.get('email')?.errors !=null &&  loginForm.get('email')?.touched"
+             class="alert alert-danger mt-2" role="alert">
+            <p *ngIf="loginForm.get('email')?.errors?.required">Email is Requried</p>
+          </div>
+  
+        </div>
+        
+  
+        <div class="form-group">
+          <label for="password">password</label>
+          <input type="text" formControlName="password"
+           name="" id="password" class="form-control"
+            placeholder="" aria-describedby="helpId">
+            <div *ngIf="loginForm.get('password')?.errors !=null &&  loginForm.get('password')?.touched"
+            class="alert alert-danger mt-2" role="alert">
+            <p *ngIf="loginForm.get('password')?.errors?.required">password is Requried</p>
+  
+        </div>
+      </div>
+  
+          
+      <button [disabled]="loginForm.invalid" class="btn btn-info btn-danger " type="submit" >Sign In</button>
+      
+      </form>
+     
+  </div>

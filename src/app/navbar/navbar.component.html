@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg  ">
+    <a class="navbar-brand logo " routerLink="home">Trendings</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            
+            <li class="nav-item">
+                <a *ngIf='isLogin' class="nav-link" routerLink="home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf='isLogin' class="nav-link" routerLink="movie">Movie</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf='isLogin' class="nav-link" routerLink="tv">TV show</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf='isLogin' class="nav-link" routerLink="pepole">Pepole</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf='isLogin' class="nav-link" routerLink="about">About</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf='isLogin' class="nav-link" routerLink="network">Network</a>
+            </li>
+
+
+           
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+           
+        </form>
+        <div class="socal-media"><i class="fab mx-2 fa-facebook"></i></div>
+        <div class="socal-media"><i class="fab mx-2 fa-instagram"></i></div>
+        <div class="socal-media"><i class="fab mx-2 fa-youtube"></i></div>
+        <div class="socal-media"><i class="fab mx-2 fa-twitter"></i></div>
+       
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a *ngIf='!isLogin' class="nav-link" routerLink="login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf='!isLogin' class="nav-link" routerLink="regester">Regester</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf='isLogin' class="nav-link log_out" (click)="isLogOut()">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf='isLogin' class="nav-link log_out" routerLink="setting" >Settings</a>
+            </li>
+               
+        </ul>
+    </div>
+</nav>

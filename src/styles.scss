@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransparent:rgba(36,186,239);
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$borderHeight:1px;
+$secondFontColor:#949cb0;
+
+
+
+
+body{
+    background-color: $bgColor;
+    color: $fontColor;
+   font-family: 'Montserrat Alternates', sans-serif;;
+}
+a{
+    font-size: 18px;
+    color: $fontColor;
+    text-decoration: none;
+}
+a :hover{
+    font-size: 18px;
+    color: $fontColor;
+text-decoration: none;
+}
+.log_out{
+    cursor: pointer;
+}
+.bord{
+height: 1px;
+background-color: $borderColor;
+}
+.secondFontColor{color: $secondFontColor;}
+
+.vote{
+    top: 0;
+    right: 10px;
+    padding: 5px;
+    background-color: $lightBgColor;
+    font-weight: 700;
+    position: absolute;
+}
+.logo{
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 30px;
+}
